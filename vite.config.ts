@@ -1,18 +1,17 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
-import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: '/acura-globus/', 
+  base: '/acura-globus/',
   server: {
     host: "::",
     port: 8080,
   },
   plugins: [
     react(),
-    mode === 'development' && componentTagger(),
-  ].filter(Boolean),
+    // componentTagger() removed
+  ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
