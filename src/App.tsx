@@ -22,14 +22,13 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/acura-globus">
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/blogs" element={<BlogsPage />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </BrowserRouter basename="/acura-globus">
+      </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
 );
